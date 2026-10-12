@@ -1,11 +1,22 @@
-# ⚡ HabitFlow — Modern Full-Stack Habit Tracker SaaS
+# ⚡ HabitFlow — Modern Full-Stack Habit Tracker & SSC Prep SaaS
 
-HabitFlow is a modern, production-quality productivity SaaS web application designed for seamless daily, weekly, and monthly habit tracking. Built with **React 18, Vite, Tailwind CSS, Framer Motion, Recharts, Express.js, and MongoDB**, it features dynamic streak calculations, interactive GitHub-style contribution heatmaps, comprehensive charts, level progression, and 1-click demo account access.
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/sachinhq/habitflow)
+
+HabitFlow is a modern, production-quality productivity SaaS web application designed for seamless daily, weekly, and monthly habit tracking, comprehensive **SSC Exam Preparation**, and **Health / Weight Management**. Built with **React 18, Vite, Tailwind CSS, Framer Motion, Recharts, Express.js, and MongoDB**, it features dynamic streak calculations, interactive GitHub-style contribution heatmaps, comprehensive charts, level progression, and 1-click demo account access.
 
 ---
 
 ## ✨ Features
 
+- **📚 SSC Exam Preparation Suite**:
+  - Full syllabus coverage for SSC CGL, CHSL, MTS, CPO, and GD.
+  - Multi-level hierarchical tracking: Exam → Subject → Chapter → Topic → Checkpoint.
+  - Study checkpoint stages: First Reading, Detailed Notes, Practice MCQs, PYQs, Mock Test, Revision 1/2/3.
+  - Daily Study Planner, Study Logging with hour counters, and Subject-wise Analytics.
+- **⚖️ Health & Weight Management Tracker**:
+  - Weekly and daily weigh-in logs with body fat %, waist circumference, and reflection notes.
+  - Target weight goals with automatic weekly rate-of-loss/gain calculation and projected target date.
+  - Progress trend charts and BMI classification indicator.
 - **🔥 Dynamic Frequency-Aware Streak System**:
   - Calculates current streak, best streak, total completed days, and consistency rate on the backend.
   - Frequency support: Daily, Specific Days of Week (e.g. Mon-Fri), Weekly target, Monthly target. Missing an unscheduled day does not break streaks.
