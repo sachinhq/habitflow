@@ -9,11 +9,8 @@ const connectDB = async () => {
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
     return conn;
   } catch (error) {
-    console.error(`❌ MongoDB Connection Error: ${error.message}`);
-    // Do not crash immediately in dev to allow debugging/retry
-    if (process.env.NODE_ENV === 'production') {
-      process.exit(1);
-    }
+    console.error(`⚠️ MongoDB Connection Warning: ${error.message}`);
+    console.error(`⚠️ App will continue running. Set MONGO_URI in environment variables to enable persistence.`);
   }
 };
 
