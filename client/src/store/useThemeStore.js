@@ -26,12 +26,19 @@ export const useThemeStore = create((set, get) => ({
     const currentTheme = get().theme;
     get().applyTheme(currentTheme);
 
-    // Listen for OS preference changes
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    mediaQuery.addEventListener('change', () => {
-      if (get().theme === 'system') {
-        get().applyTheme('system');
+    // Listen for OS preference changes safely across all mobile browsers
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const listener = () => {
+        if (get().theme === 'system') {
+          get().applyTheme('system');
+        }
+      };
+      if (mediaQuery.addEventListener) {
+        mediaQuery.addEventListener('change', listener);
+      } else if (mediaQuery.addListener) {
+        mediaQuery.addListener(listener);
       }
-    });
+    }
   },
 }));

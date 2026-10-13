@@ -34,6 +34,7 @@ app.use(helmet({ contentSecurityPolicy: false }));
 // CORS configuration
 const allowedOrigins = [
   process.env.CLIENT_URL || 'http://localhost:5173',
+  'https://habitflow-9gok.onrender.com',
   'http://localhost:3000',
   'http://127.0.0.1:5173',
 ];
